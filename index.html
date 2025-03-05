@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>qed name gen</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:wght@300&display=swap');
+
+    body {
+      background-color: #181111;
+      color: #eee;
+    }
+
+    .container {
+      margin: 0 auto;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    #text {
+      text-wrap: balance;
+      text-align: center;
+      font-size: 3rem;
+
+      font-family: "Sour Gummy", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-style: normal;
+      font-variation-settings:
+        "wdth" 100;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="text"></div>
+    <div>
+      <button id="button">generate</button>
+    </div>
+  </div>
+</body>
+<script src="gen.js" type="module"></script>
+
+</html>
