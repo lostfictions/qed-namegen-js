@@ -40,10 +40,18 @@ function randomName() {
   return [firstName, alias, lastName].join(" ").trim();
 }
 
+const olds = [];
 const text = document.querySelector("#text");
-document.querySelector("#button").addEventListener("click", (e) => {
+document.querySelector("#generate").addEventListener("click", (e) => {
   e.preventDefault();
+  olds.push(text.textContent);
   text.textContent = randomName();
+});
+document.querySelector("#undo").addEventListener("click", (e) => {
+  e.preventDefault();
+  if (olds.length > 0) {
+    text.textContent = olds.pop();
+  }
 });
 
 text.textContent = randomName();
